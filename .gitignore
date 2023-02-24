@@ -24,7 +24,8 @@
 
 # Icon must end with two \r
 Icon
-
+#Ingore package-lock
+package-lock.json
 # Thumbnails
 ._*
 
