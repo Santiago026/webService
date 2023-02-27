@@ -3,7 +3,7 @@ import { registerNewUser,loginUser } from '../services/auth.service'
 
 const resgisterCtrl = async (req: Request, res: Response) => {
     const responseUSer = await registerNewUser(req.body);
-    res.send(responseUSer);
+    res.status(201).send(responseUSer);
 };
 
 const loginCtrl = async (req: Request, res: Response) => {
@@ -16,7 +16,7 @@ const loginCtrl = async (req: Request, res: Response) => {
     }else if(responseCredentials.message==="WRONG_PASSWORD"){
         res.status(401).send(responseCredentials);
     }else{
-        res.send(responseCredentials);
+        res.status(201).send(responseCredentials);
     } 
 };
 export { resgisterCtrl, loginCtrl };

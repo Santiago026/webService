@@ -15,12 +15,7 @@ const checkToken = async (req: RequestWithUser, res: Response, next: NextFunctio
         const isUSer = verifyToken(`${token}`) as {id:String} //{id:1,iat:123456,exp:123456}
         if(!isUSer){
             res.status(401).send({message:'TOKEN_NOT_VALID'});
-        }else{
-            // res.status(201).send(
-            //     {
-            //         message: "TOKEN_VALID"
-            //     }
-            // );            
+        }else{           
             req.user=isUSer;
             next();
         }

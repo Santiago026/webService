@@ -1,7 +1,7 @@
 import "dotenv/config";
 import  express  from "express";
 import  cors  from "cors";//
-import  { router }  from "./api/routes";
+import  { router }  from "./api/routes/index";
 import db from "./config/mongo";
 const Port= process.env.PORT || 3001;
 const app = express();
@@ -18,3 +18,5 @@ db().then(()=>{
 app.listen(Port, () => {
   console.log(`Server is running on port ${Port}`);
 }); 
+
+export default {app};

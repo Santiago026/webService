@@ -1,7 +1,5 @@
 import {Response} from 'express';
 const handleHttp=(res:Response,error:string)=>{
-    //console.log(errorRaw);
-    res.status(500).send({error});
-    
+    res.status(500).send({error});  
 };
 export {handleHttp};

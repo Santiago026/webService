@@ -7,12 +7,12 @@ const encryptPassword = async (password:string) => {
     return passwordHash;
 };
 
-const verifiedPassword = async (password:string, savedPassword:string): Promise<any> => {
+const verifiedPassword = async (password:string, savedPassword:string)=> {
     try {
         const isCorrect =await bcrypt.compare(password, savedPassword);
         return isCorrect;
     } catch (error) {
-        console.log(error);
+        return error;
     }
 };
 

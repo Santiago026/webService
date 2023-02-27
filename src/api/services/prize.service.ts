@@ -16,6 +16,7 @@ const getPrize =async (id: string) => {
 //Service to get a single prize by date
 const findPriceByDate = async ( fechaSorteo:string) => {
     const responsePrize= await PrizeModel.find({FECHA_SORTEO:fechaSorteo});
+    
     return responsePrize;
 };
 
