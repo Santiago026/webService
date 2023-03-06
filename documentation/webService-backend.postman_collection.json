@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "5875609d-434d-4071-a3ca-c5c3f5030d0e",
+		"name": "webService-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14189538"
+	},
+	"item": [
+		{
+			"name": "Read",
+			"item": [
+				{
+					"name": "Read: One Prize via id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http:///localhost:3003/prize/64010e1981e0cabab784c8b4",
+							"protocol": "http",
+							"path": [
+								"localhost:3003",
+								"prize",
+								"64010e1981e0cabab784c8b4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read: One Prize via date by transactionId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"TRANSACCION_ID\": \"5824442343\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/prize/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"prize",
+								"transaction"
+							]
+						},
+						"description": "# **Endpoint para consultar las transacciones ganadoras de una fecha en específico**\n\n### **Se debe retornar la siguiente información:  \n**"
+					},
+					"response": []
+				},
+				{
+					"name": "Read: One Prize via date",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"FECHA_SORTEO\": \"01/02/22\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/prize/date",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"prize",
+								"date"
+							]
+						},
+						"description": "# **Endpoint para consultar las transacciones ganadoras de una fecha en específico**\n\n### **Se debe retornar la siguiente información:  \n**"
+					},
+					"response": []
+				},
+				{
+					"name": "Read: One Prize via range of dates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"start_date\": \"30/12/22\",\n    \"end_date\": \"01/01/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/prize/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"prize",
+								"dates"
+							]
+						},
+						"description": "# **Endpoint para consultar las premios pagados de un rango de fechas**\n\n### El rango de fechas no superá un mes. Se debe retornar la siguiente información:"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Read error",
+			"item": [
+				{
+					"name": "Read: One Prize via id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http:///localhost:3003/prize/64010e1981e0cabab784c8b4",
+							"protocol": "http",
+							"path": [
+								"localhost:3003",
+								"prize",
+								"64010e1981e0cabab784c8b4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read: One Prize via date by transactionId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"TRANSACCION_ID\": \"5844234324\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/prize/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"prize",
+								"transaction"
+							]
+						},
+						"description": "# **Endpoint para consultar las transacciones ganadoras de una fecha en específico**\n\n### **Se debe retornar la siguiente información:  \n**"
+					},
+					"response": []
+				},
+				{
+					"name": "Read: One Prize via date",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"FECHA_SORTEO\": \"01/02/21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/prize/date",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"prize",
+								"date"
+							]
+						},
+						"description": "# **Endpoint para consultar las transacciones ganadoras de una fecha en específico**\n\n### **Se debe retornar la siguiente información:  \n**"
+					},
+					"response": []
+				},
+				{
+					"name": "Read: One Prize via range of dates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"start_date\": \"30/12/22\",\n    \"end_date\": \"31/01/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/prize/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"prize",
+								"dates"
+							]
+						},
+						"description": "# **Endpoint para consultar las premios pagados de un rango de fechas**\n\n### El rango de fechas no superá un mes. Se debe retornar la siguiente información:"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register: New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"susuerte\",\n    \"username\": \"admin2\",\n    \"password\": \"010203susuerte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login: User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"010203susuerte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http:///localhost:3003/auth/login",
+							"protocol": "http",
+							"path": [
+								"localhost:3003",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete: User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http:///localhost:3003/auth/delete",
+							"protocol": "http",
+							"path": [
+								"localhost:3003",
+								"auth",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth  error",
+			"item": [
+				{
+					"name": "Register: New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"susuerte\",\n    \"username\": \"admin\",\n    \"password\": \"010203susuerte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http:///localhost:3003/auth/register",
+							"protocol": "http",
+							"path": [
+								"localhost:3003",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login: User error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"susuerte43\",\n    \"password\": \"010203susuerte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http:///localhost:3003/auth/login",
+							"protocol": "http",
+							"path": [
+								"localhost:3003",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
