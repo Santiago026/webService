@@ -7,7 +7,7 @@ const PrizeSchema = new Schema<Prize>(
             required: true,
         },
         FECHA_SORTEO:{
-            type: String,
+            type: Date,
             required: true,
         },
         VALOR_PREMIO:{

@@ -6,8 +6,7 @@ interface RequestWithUser extends Request {
     user?: string|JwtPayload;
 }
 
-const checkToken = async (req: RequestWithUser, res: Response, next: NextFunction) => {
-    
+const checkToken = async (req: RequestWithUser, res: Response, next: NextFunction) => {   
     try {
         const tokenByUser = req.headers.authorization||'';
         // const token = tokenByUser.split(' ').pop;//[Bearer,token]
@@ -18,9 +17,7 @@ const checkToken = async (req: RequestWithUser, res: Response, next: NextFunctio
         }else{           
             req.user=isUSer;
             next();
-        }
-        
-        
+        }    
     } catch (error) {
       res.status(400).send({message:'SESSION_NOT_VALID'});
     }
